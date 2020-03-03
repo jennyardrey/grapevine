@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import Login from "./components/Login";
 import MoodHome from "./components/MoodHome";
 import MoodScore from "./components/MoodScore";
+import axios from "axios";
 
 class App extends Component {
 	state = {
@@ -16,6 +17,25 @@ class App extends Component {
 		},
 		isLoggedin: false,
 		facesClicked: false
+	};
+
+	loginHandler = () => {
+		const user = {
+			name: this.state.data.name,
+			role: this.state.data.role
+		};
+		axios
+			.post("https://boiling-meadow-46426.herokuapp.com/user", user)
+			.then(response => {
+				const userId = response.data._id;
+				this.setState({
+					data: {
+						...this.state.data,
+						userId: userId
+					},
+					isLoggedIn: true
+				});
+			});
 	};
 
 	render() {
