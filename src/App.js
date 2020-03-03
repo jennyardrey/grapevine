@@ -1,10 +1,12 @@
+
 import React, { Component } from "react";
-import "./App.css";
+import './styles/LoginDesign.css'
 import { Route, Switch } from "react-router-dom";
 import Login from "./components/Login";
 import MoodHome from "./components/MoodHome";
 import MoodScore from "./components/MoodScore";
 import axios from "axios";
+
 
 class App extends Component {
 	state = {
@@ -18,6 +20,7 @@ class App extends Component {
 		isLoggedin: false,
 		facesClicked: false
 	};
+
 
 	loginHandler = () => {
 		const user = {
@@ -54,5 +57,6 @@ class App extends Component {
 			</div>
 		);
 	}
+
 }
 export default App;
