@@ -1,61 +1,60 @@
 body {
-  background-image: url("../images/halftone-yellow/halftone-yellow.png");
-  background-position: center;
+	background-image: url("../components/images/halftone-yellow/halftone-yellow.png");
+	background-position: center;
 }
 
 h1 {
-  font-family: monospace;
-  color: #424141;
-  font-size: 100px;
-  position: center;
-  text-shadow: 2px black;
+	font-family: monospace;
+	color: #424141;
+	font-size: 100px;
+	position: center;
+	text-shadow: 2px black;
 }
 
 .nameBox {
-  font-size: 30px;
-  border-radius: 90px;
-  padding-bottom: 5px;
+	font-size: 30px;
+	border-radius: 90px;
+	padding-bottom: 5px;
 }
 
 button {
-  width: 200px;
-  height: 200px;
-  color: #424141;
-  text-shadow: 2px black;
-  border-radius: 100px;
-  border: none;
-  position: relative;
-  top: 35px;
-  border-color: #424141;
-  background: #fcfcfb;
-  font-size: 50pt;
-  &:hover {
-    cursor: pointer;
-  }
+	width: 200px;
+	height: 200px;
+	color: #424141;
+	text-shadow: 2px black;
+	border-radius: 100px;
+	border: none;
+	position: relative;
+	top: 35px;
+	border-color: #424141;
+	background: #fcfcfb;
+	font-size: 50pt;
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 .departmentBox {
-  font-size: 30px;
-  border-radius: 90px;
-  padding-top: 5px;
+	font-size: 30px;
+	border-radius: 90px;
+	padding-top: 5px;
 }
 
 .name {
-  font-family: Verdana;
-  color: #424141;
-  font-size: 30px;
-  text-shadow: 2px black;
-  position: relative;
-  bottom: 350px;
-
+	font-family: Verdana;
+	color: #424141;
+	font-size: 30px;
+	text-shadow: 2px black;
+	position: relative;
+	bottom: 350px;
 }
 
 .role {
-  font-family: Verdana;
-  color: #424141;
-  font-size: 30px; 
-  position: relative;
-  bottom: 320px;
-  left: 10px;
-  text-shadow: 2px black;
+	font-family: Verdana;
+	color: #424141;
+	font-size: 30px;
+	position: relative;
+	bottom: 320px;
+	left: 10px;
+	text-shadow: 2px black;
 }
