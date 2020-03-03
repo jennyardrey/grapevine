@@ -7,7 +7,7 @@ const MessageCard = (props) => {
 		_id }
 		= props;
 	return <div>
-		{user}
+		{user.role}
 		{message}
 
 	</div>
