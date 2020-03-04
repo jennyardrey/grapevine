@@ -18,6 +18,24 @@ class App extends Component {
 		isLoggedIn: false,
 		facesClicked: false
 	};
+
+	componentDidUpdate(prevProps, prevState) {
+		const moodscore = {
+			moodScore: this.state.moodData.moodScore,
+			user: this.state.moodData.userId,
+			role: this.state.moodData.role
+		};
+
+		if (
+			this.state.moodData.moodScore !== prevState.moodData.moodScore &&
+			this.state.moodData.userId
+		) {
+			console.log("app componentdidupdate has run");
+			axios
+				.post("https://boiling-meadow-46426.herokuapp.com/user/mood", moodscore)
+				.then(response => console.log(response));
+		}
+	}
 	// login handler which creates a new user
 	loginHandler = () => {
 		const user = {
@@ -35,7 +53,8 @@ class App extends Component {
 					},
 					isLoggedIn: true
 				});
-			});
+			})
+			.catch(error => console.log(error));
 	};
 	//used for inputs made on login page
 	inputChangeHandler = event => {
@@ -60,16 +79,26 @@ class App extends Component {
 		});
 	};
 
-	//message input handler
-	messageChangeHandler = event => {
-		console.log("hello");
-		this.setState({
-			moodData: {
-				...this.state.moodData,
-				[event.target.name]: event.target.value
-			}
-		});
+	//submit message on button click
+	submitMessageHandler = () => {
+		const message = {
+			message: this.state.moodData.message,
+			user: this.state.moodData.userId
+		};
+
+		if (this.state.moodData.message && this.state.moodData.userId) {
+			axios
+				.post(
+					"https://boiling-meadow-46426.herokuapp.com/user/message",
+					message
+				)
+				.then(response => console.log(response))
+				.catch(error => console.log(error));
+		} else {
+			console.log(message);
+		}
 	};
+
 	render() {
 		return (
 			<div className="App">
@@ -94,7 +123,8 @@ class App extends Component {
 								{...props}
 								click={this.moodScoreHandler}
 								faces={this.state.facesClicked}
-								message={this.messageChangeHandler}
+								message={this.inputChangeHandler}
+								submitMessage={this.submitMessageHandler}
 							/>
 						)}
 					/>

@@ -10,7 +10,7 @@ const login = props => {
 		<div>
 			<h1>Grapevine</h1>
 
-			<img src={image} alt="image" />
+			<img src={image} alt="background" />
 
 			<form className="name" onSubmit={handleOnSubmit}>
 				Name:
