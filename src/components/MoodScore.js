@@ -9,6 +9,7 @@ const MoodScore = props => {
 			<h3>have anything to say...?</h3>
 			<p>Please lettuce know</p>
 			<textarea type="text" onChange={message} name="message" />
+			<button onClick={props.send}>Send</button>
 		</div>
 	);
 };

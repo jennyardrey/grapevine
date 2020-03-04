@@ -6,7 +6,7 @@ const MoodHome = props => {
 	return (
 		<div>
 			{props.faces ? (
-				<MoodScore message={props.message} />
+				<MoodScore message={props.message} send={props.submitMessage} />
 			) : (
 				<Fragment>
 					<h1>How are you feeling today?</h1>
