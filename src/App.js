@@ -16,7 +16,8 @@ class App extends Component {
 			message: null
 		},
 		isLoggedIn: false,
-		facesClicked: false
+		facesClicked: false,
+		anon: false
 	};
 
 	componentDidUpdate(prevProps, prevState) {
@@ -81,11 +82,16 @@ class App extends Component {
 
 	//submit message on button click
 	submitMessageHandler = () => {
-		const message = {
+		let message = {
 			message: this.state.moodData.message,
 			user: this.state.moodData.userId
 		};
-
+		if (this.state.anon === true) {
+			message = {
+				message: this.state.moodData.message,
+				user: "anon"
+			};
+		}
 		if (this.state.moodData.message && this.state.moodData.userId) {
 			axios
 				.post(
@@ -98,7 +104,11 @@ class App extends Component {
 			console.log(message);
 		}
 	};
-
+	onToggleHandler = () => {
+		this.setState({
+			anon: !this.state.anon
+		});
+	};
 	render() {
 		return (
 			<div className="App">
@@ -125,6 +135,8 @@ class App extends Component {
 								faces={this.state.facesClicked}
 								message={this.inputChangeHandler}
 								submitMessage={this.submitMessageHandler}
+								toggle={this.onToggleHandler}
+								anon={this.state.anon}
 							/>
 						)}
 					/>

@@ -23,11 +23,13 @@ h1 {
 	text-align: center;
 	font-family: "Fredoka One";
 	margin-top: 150px;
-	color: rgb(192, 194, 192);
+	color: rgb(133, 37, 177);
 
 	font-style: italic;
 }
-
+p {
+	text-align: center;
+}
 button {
 	background-color: transparent;
 	border: none;
