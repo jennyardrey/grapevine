@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import classes from "../style/Faces.module.css";
+import classes from "../styles/Faces.module.css";
 
 const faces = props => {
 	const { click } = props;

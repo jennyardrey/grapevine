@@ -1,7 +1,28 @@
-import React from "react";
+import React, { Fragment } from "react";
+import Faces from "./Faces";
+import MoodScore from "./MoodScore";
 
-const moodHome = props => {
-	return <div>MoodHome page</div>;
+const MoodHome = props => {
+	return (
+		<div>
+			{props.faces ? (
+				<MoodScore
+					message={props.message}
+					send={props.submitMessage}
+					toggle={props.toggle}
+					anon={props.anon}
+				/>
+			) : (
+				<Fragment>
+					<h1>How are you feeling today?</h1>
+					<p>
+						Please select the face that best represents your current mood at
+						work
+					</p>
+					<Faces click={props.click} />
+				</Fragment>
+			)}
+		</div>
+	);
 };
-
-export default moodHome;
+export default MoodHome;
