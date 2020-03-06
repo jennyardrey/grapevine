@@ -1,12 +1,5 @@
-.mood-score-card-inner {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	border-radius: 50%;
-	border: solid 1px black;
+.mood-score-graphic {
+	width: 200px;
 	margin: auto;
 	margin-top: 20px;
-	padding: 40px;
-	width: fit-content;
-	background-color: white;
 }
