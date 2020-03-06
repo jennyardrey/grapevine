@@ -1,3 +1,4 @@
+
 import React from "react";
 import PropTypes from "prop-types";
 import classes from "../styles/MoodScore.module.css";
@@ -36,3 +37,4 @@ MoodScore.propTypes = {
 };
 
 export default MoodScore;
+

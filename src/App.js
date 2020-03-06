@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import "./styles/LoginDesign.css";
+
+import './styles/LoginDesign.css';
+
 import { Route, Switch } from "react-router-dom";
 import Login from "./components/Login";
 import MoodHome from "./components/MoodHome";

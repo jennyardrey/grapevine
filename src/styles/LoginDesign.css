@@ -1,6 +1,8 @@
 body {
-	background-image: url("../components/images/halftone-yellow/halftone-yellow.png");
-	background-position: center;
+
+  background-image: url("../components//images//halftone-yellow/halftone-yellow.png");
+  background-position: center;
+
 }
 
 h1 {
