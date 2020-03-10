@@ -7,7 +7,6 @@ const MessageCard = (props) => {
 		_id }
 		= props;
 	return <div className="message-card">
-		{console.log(message)}
 		{message}
 
 	</div>
