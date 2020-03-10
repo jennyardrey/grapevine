@@ -6,6 +6,7 @@ import 'react-circular-progressbar/dist/styles.css';
 const MoodScoreCard = (props) => {
 	const {
 		moodScore,
+		scoreName
 	}
 		= props;
 
@@ -18,7 +19,8 @@ const MoodScoreCard = (props) => {
 	return <div className="mood-score-graphic">
 		<CircularProgressbar
 			value={percentage}
-			text={`${percentage}%`}
+			text={`${percentage}% 
+			${scoreName}`}
 			styles={{
 				root: {},
 				path: {
@@ -35,6 +37,7 @@ const MoodScoreCard = (props) => {
 				},
 				text: {
 					fill: '#264653',
+					fontSize: '5px'
 				}
 			}}
 		/>

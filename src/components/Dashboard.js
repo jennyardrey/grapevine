@@ -68,40 +68,35 @@ class Dashboard extends Component {
 	render() {
 
 		return (
+			<div>
 
-			<div className="main-score">
-				{
-					this.state.moodScore && this.state.moodScore.length > 0 ?
+				<div className="main-score">
+					{
+						this.state.moodScore && this.state.moodScore.length > 0 ?
 
-						<MoodScoreCard
-							moodScore={this.state.moodScore} />
-						: <div className="error">You currently have no mood</div>
-				}
-				{
-					this.state.results.map(mood => {
-						if (mood.role === "Boss") {
-							console.log(mood.moodScore)
-						}
-					})
-				}
-				<div className="role-breakdown">
-					<div className="role">
-						<MoodScoreCard
-							moodScore={this.state.bossmood} />
-						<h3>Boss Score</h3>
-					</div>
-					<div className="role">
-						<MoodScoreCard
-							moodScore={this.state.assistantmood} />
-						<h3>Assistant Score</h3>
-					</div>
-					<div className="role">
-						<MoodScoreCard
-							moodScore={this.state.supervisormood} />
-						<h3>Supervisor Score</h3>
-					</div>
+							<MoodScoreCard
+								moodScore={this.state.moodScore}
+								scoreName="Staff Happiness Score" />
+							: <div className="error">You currently have no mood</div>
+					}
 				</div>
 
+
+				<div className="role-breakdown">
+
+					<MoodScoreCard
+						moodScore={this.state.bossmood}
+						scoreName="Boss's Happiness Score" />
+
+					<MoodScoreCard
+						moodScore={this.state.assistantmood}
+						scoreName="Assistant's Happiness Score" />
+
+					<MoodScoreCard
+						moodScore={this.state.supervisormood}
+						scoreName="Supervisor's Happiness Score" />
+
+				</div>
 				<div className="messages">
 					<h2>Staff messages</h2>
 					{
@@ -113,6 +108,7 @@ class Dashboard extends Component {
 					}
 				</div>
 			</div >
+
 		);
 
 	}
