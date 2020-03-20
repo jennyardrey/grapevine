@@ -19,7 +19,7 @@ class MoodScore extends Component {
 	componentDidMount() {
 		Axios.get("https://boiling-meadow-46426.herokuapp.com/moods/messages")
 			.then(response => {
-				console.log(response.data);
+				console.log("messages", response.data);
 				this.setState({
 					messages: response.data
 				});

@@ -1,0 +1,37 @@
+.NavBar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 100%;
+	height: 60px;
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+.NavBar .Logo {
+	width: 30%;
+	height: 100%;
+	text-align: center;
+	margin: auto;
+}
+
+.NavBar .Links {
+	height: 100%;
+	width: 70%;
+	list-style: none;
+	display: flex;
+	justify-content: space-evenly;
+	margin: auto;
+}
+
+.NavBar .Links .navlinks {
+	list-style: none;
+	text-decoration: none;
+	border-bottom: 0px solid white;
+}
+
+.active {
+	border-bottom: 2px solid white;
+	color: white;
+}

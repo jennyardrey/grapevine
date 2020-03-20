@@ -1,13 +1,17 @@
 import React, { Component } from "react";
 
-import './styles/LoginDesign.css';
+import "./styles/LoginDesign.css";
 
 import { Route, Switch } from "react-router-dom";
 import Login from "./components/Login";
 import MoodHome from "./components/MoodHome";
 import MoodScore from "./components/MoodMessage";
 import axios from "axios";
+
+import Nav from "./components/Nav";
+
 import Dashboard from "./components/Dashboard";
+
 
 class App extends Component {
 	state = {
@@ -91,8 +95,7 @@ class App extends Component {
 		};
 		if (this.state.anon === true) {
 			message = {
-				message: this.state.moodData.message,
-				user: "anon"
+				message: this.state.moodData.message
 			};
 		}
 		if (this.state.moodData.message && this.state.moodData.userId) {
@@ -115,6 +118,7 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
+				{this.state.isLoggedIn ? <Nav role={this.state.moodData.role} /> : null}
 				<Switch>
 					<Route
 						exact
