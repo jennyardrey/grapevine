@@ -7,7 +7,11 @@ import Login from "./components/Login";
 import MoodHome from "./components/MoodHome";
 import MoodScore from "./components/MoodMessage";
 import axios from "axios";
+
 import Nav from "./components/Nav";
+
+import Dashboard from "./components/Dashboard";
+
 
 class App extends Component {
 	state = {
@@ -143,7 +147,7 @@ class App extends Component {
 							/>
 						)}
 					/>
-					<Route exact path="/results" component={MoodScore} />
+					<Route exact path="/results" component={Dashboard} />
 				</Switch>
 			</div>
 		);
