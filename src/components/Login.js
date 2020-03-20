@@ -1,16 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/LoginDesign.css";
-import image from "./images/halftone-yellow/halftone-yellow.png";
+import logo from "./images/logo.png"
 
 const login = props => {
 	const { handleOnSubmit } = props;
 
 	return (
 		<div>
+			<img src={logo} alt="logo" />
 			<h1>Grapevine</h1>
-
-			<img src={image} alt="background" />
 
 			<form className="name" onSubmit={handleOnSubmit}>
 				Name:

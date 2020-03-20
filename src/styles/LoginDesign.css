@@ -1,16 +1,11 @@
 body {
 
-  background-image: url("../components//images//halftone-yellow/halftone-yellow.png");
-  background-position: center;
+  background-color: #02C39A;
 
 }
 
 h1 {
-	font-family: monospace;
-	color: #424141;
-	font-size: 100px;
-	position: center;
-	text-shadow: 2px black;
+	display: none;
 }
 
 .nameBox {
