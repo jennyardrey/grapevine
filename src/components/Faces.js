@@ -1,6 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classes from "../styles/Faces.module.css";
+import face1 from "./images/Face1.png"
+import face2 from "./images/Face2.png"
+import face3 from "./images/Face3.png"
+import face4 from "./images/Face4.png"
+import face5 from "./images/Face5.png"
 
 const faces = props => {
 	const { click } = props;
@@ -10,14 +15,14 @@ const faces = props => {
 			<button>
 				<img
 					onClick={click}
-					src="http://pngimg.com/uploads/smiley/smiley_PNG113.png"
+					src={face1}
 					alt=""
 					name="1"
 				/>
 			</button>
 			<button>
 				<img
-					src="http://pngimg.com/uploads/smiley/smiley_PNG113.png"
+					src={face2}
 					alt=""
 					onClick={click}
 					name="2"
@@ -25,7 +30,7 @@ const faces = props => {
 			</button>
 			<button>
 				<img
-					src="http://pngimg.com/uploads/smiley/smiley_PNG111.png"
+					src={face3}
 					alt=""
 					onClick={click}
 					name="3"
@@ -33,7 +38,7 @@ const faces = props => {
 			</button>
 			<button>
 				<img
-					src="http://pngimg.com/uploads/smiley/smiley_PNG110.png"
+					src={face4}
 					alt=""
 					onClick={click}
 					name="4"
@@ -41,7 +46,7 @@ const faces = props => {
 			</button>
 			<button>
 				<img
-					src="http://pngimg.com/uploads/smiley/smiley_PNG86.png"
+					src={face5}
 					alt=""
 					onClick={click}
 					name="5"
