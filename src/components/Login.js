@@ -7,34 +7,38 @@ const login = props => {
 	const { handleOnSubmit } = props;
 
 	return (
-		<div>
+		<div className="login-page">
+
 			<img src={logo} alt="logo" />
 			<h1>Grapevine</h1>
 
-			<form className="name" onSubmit={handleOnSubmit}>
-				Name:
-				<input
-					className="nameBox"
-					type="text"
-					onChange={props.input}
-					name="name"
-				/>
-			</form>
-			<div></div>
-
-			<form className="role">
-				Role:
-				<input
-					className="departmentBox"
-					type="text"
-					onChange={props.input}
-					name="role"
-				/>
-				<div></div>
-				<button type="submit" onClick={props.login}>
-					<Link to="/mood-home">Enter</Link>
-				</button>
-			</form>
+			<div className="login-form">
+				<form autocomplete="off" className="login" onSubmit={handleOnSubmit}>
+					<div className="input-container">
+						<input
+							className="nameBox form-item"
+							type="text"
+							onChange={props.input}
+							name="name"
+							required
+						/>
+						<label className="form-item">Name</label>
+					</div>
+					<div className="input-container">
+						<input
+							className="departmentBox form-item"
+							type="text"
+							onChange={props.input}
+							name="role"
+							required
+						/>
+						<label className="form-item">Role</label>
+					</div>
+					<button className="btn form-item" type="submit" onClick={props.login}>
+						<Link to="/mood-home">Enter</Link>
+					</button>
+				</form>
+			</div>
 		</div>
 	);
 };

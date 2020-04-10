@@ -24,7 +24,8 @@ class App extends Component {
 		},
 		isLoggedIn: false,
 		facesClicked: false,
-		anon: false
+		anon: false,
+		messageSent: false
 	};
 
 	componentDidUpdate(prevProps, prevState) {
@@ -89,6 +90,9 @@ class App extends Component {
 
 	//submit message on button click
 	submitMessageHandler = () => {
+		this.setState({
+			messageSent: true
+		})
 		let message = {
 			message: this.state.moodData.message,
 			user: this.state.moodData.userId
@@ -110,6 +114,7 @@ class App extends Component {
 			console.log(message);
 		}
 	};
+
 	onToggleHandler = () => {
 		this.setState({
 			anon: !this.state.anon
@@ -144,6 +149,7 @@ class App extends Component {
 								submitMessage={this.submitMessageHandler}
 								toggle={this.onToggleHandler}
 								anon={this.state.anon}
+								messageSent={this.state.messageSent}
 							/>
 						)}
 					/>
