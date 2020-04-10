@@ -3,10 +3,10 @@ import React from "react";
 const ThankYou = () => {
 	return (
 		<div>
-			<h1>
+			<h2>
 				Thank you for your input. We take our employee feedback seriously.
 				Please lookout for our next update
-			</h1>
+			</h2>
 		</div>
 	);
 };

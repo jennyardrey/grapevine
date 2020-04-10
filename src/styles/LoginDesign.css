@@ -1,57 +1,77 @@
 body {
-
-  background-color: #02C39A;
-
+	background-color: #02C39A;
 }
-
+img {
+	width: 40vw;
+	margin: auto;
+}
+.login-page {
+	max-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
 h1 {
 	display: none;
 }
+.login-form {
+	position:absolute;
+	left:50%;
+	top:70%;
+	transform: translate(-50%,-50%);
+  background-color: rgba(0, 0, 0, 0.2);
+	border-radius:5px;
+	padding: 30px 100px;
+}
+.input-container {
+	position:relative;
+	margin-bottom:25px;
+}
+.input-container label{
+	position:absolute;
+	top:0px;
+	left:0px;
+	font-size:16px;
+	color:#fff;	
+	transition: all 0.5s ease-in-out;
+}
+.input-container input{ 
+  border:0;
+  border-bottom:1px solid #555;  
+  background:transparent;
+  width:100%;
+  padding:8px 0 5px 0;
+  font-size:16px;
+  color:#fff;
+}
+.input-container input:focus{ 
+ border:none;	
+ outline:none;
+ border-bottom:1px solid #e74c3c;	
+}
+a {
+	text-decoration: none;
 
-.nameBox {
-	font-size: 30px;
-	border-radius: 90px;
-	padding-bottom: 5px;
+}
+.btn{
+	color:#fff;
+	background-color:#FFF;
+	outline: none;
+    border: 0;
+    color: #fff;
+	padding:10px 20px;
+	text-transform:uppercase;
+margin: auto;
+	border-radius:2px;
+	cursor:pointer;
+	position:relative;
+}
+.input-container input:focus ~ label,
+.input-container input:valid ~ label{
+	top:-12px;
+	font-size:12px;
+	
 }
 
 button {
-	width: 200px;
-	height: 200px;
-	color: #424141;
-	text-shadow: 2px black;
-	border-radius: 100px;
-	border: none;
-	position: relative;
-	top: 35px;
-	border-color: #424141;
-	background: #fcfcfb;
-	font-size: 50pt;
-	&:hover {
-		cursor: pointer;
-	}
-}
-
-.departmentBox {
-	font-size: 30px;
-	border-radius: 90px;
-	padding-top: 5px;
-}
-
-.name {
-	font-family: Verdana;
-	color: #424141;
-	font-size: 30px;
-	text-shadow: 2px black;
-	position: relative;
-	bottom: 350px;
-}
-
-.role {
-	font-family: Verdana;
-	color: #424141;
-	font-size: 30px;
-	position: relative;
-	bottom: 320px;
-	left: 10px;
-	text-shadow: 2px black;
+	
 }
