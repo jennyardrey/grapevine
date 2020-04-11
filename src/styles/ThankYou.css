@@ -1,0 +1,15 @@
+.thankyou-message {
+	max-width: 100vh;
+	margin: auto;
+	padding: 20px;
+}
+.thankyou-text {
+	margin: auto;
+	text-align: center;
+	padding: 40px;
+}
+.back-btn {
+  margin: auto;
+  padding-top: 100px;
+  text-align: center;
+}
