@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import Faces from "./Faces";
 import MoodScore from "./MoodScore";
+import "../styles/MoodHome.css"
 
 const MoodHome = props => {
 	return (
@@ -15,11 +16,13 @@ const MoodHome = props => {
 				/>
 			) : (
 					<Fragment>
-						<h1>How are you feeling today?</h1>
-						<p>
-							Please select the face that best represents your current mood at
-							work
+						<div className="main-text">
+							<h2>Welcome to Grapevine. How are you feeling today?</h2>
+							<p>
+								Please select the face that best represents your current mood at
+								work at the moment.
 					</p>
+						</div>
 						<Faces click={props.click} />
 					</Fragment>
 				)}
