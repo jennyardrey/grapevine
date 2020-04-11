@@ -5,10 +5,8 @@ import "./styles/LoginDesign.css";
 import { Route, Switch } from "react-router-dom";
 import Login from "./components/Login";
 import MoodHome from "./components/MoodHome";
-import MoodScore from "./components/MoodMessage";
 import axios from "axios";
 
-import Nav from "./components/Nav";
 
 import Dashboard from "./components/Dashboard";
 
@@ -123,7 +121,7 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				{this.state.isLoggedIn ? <Nav role={this.state.moodData.role} /> : null}
+
 				<Switch>
 					<Route
 						exact
@@ -150,6 +148,7 @@ class App extends Component {
 								toggle={this.onToggleHandler}
 								anon={this.state.anon}
 								messageSent={this.state.messageSent}
+								role={this.state.moodData.role}
 							/>
 						)}
 					/>

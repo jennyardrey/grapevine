@@ -2,10 +2,13 @@ import React, { Fragment } from "react";
 import Faces from "./Faces";
 import MoodScore from "./MoodScore";
 import "../styles/MoodHome.css"
+import Nav from "../components/Nav";
+
 
 const MoodHome = props => {
 	return (
 		<div>
+			<Nav role={props.role} />
 			{props.faces ? (
 				<MoodScore
 					message={props.message}
