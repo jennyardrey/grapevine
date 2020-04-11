@@ -3,12 +3,19 @@ import '../styles/MessageCard.css'
 const MessageCard = (props) => {
 	const {
 		message,
-		user,
-		_id }
+		user
+	}
 		= props;
-	return <div className="message-card">
-		{message}
 
+	const name = user.name;
+	console.log(name)
+	return <div className="message-card">
+		<div className="message">
+			{message} </div>
+
+		<div className="username">
+			{name}
+		</div>
 	</div>
 
 }
