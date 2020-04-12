@@ -9,8 +9,7 @@ import axios from "axios";
 
 
 import Dashboard from "./components/Dashboard";
-import Nav from "./components/Nav";
-
+import Documents from "./components/Documents";
 
 class App extends Component {
 	state = {
@@ -157,6 +156,15 @@ class App extends Component {
 						path="/results"
 						render={props => (
 							<Dashboard
+								{...props}
+								role={this.state.moodData.role}
+							/>
+						)}
+					/>
+					<Route exact
+						path="/documents"
+						render={props => (
+							<Documents
 								{...props}
 								role={this.state.moodData.role}
 							/>

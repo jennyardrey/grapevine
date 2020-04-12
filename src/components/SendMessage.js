@@ -1,10 +1,10 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import classes from "../styles/MoodScore.module.css";
+import classes from "../styles/SendMessage.module.css";
 import ThankYou from "../components/ThankYou"
 
-const MoodScore = props => {
+const SendMessage = props => {
 	const { message } = props;
 	return (<div>
 		{props.messageSent === false ?
@@ -40,9 +40,9 @@ const MoodScore = props => {
 
 	);
 };
-MoodScore.propTypes = {
+SendMessage.propTypes = {
 	message: PropTypes.func
 };
 
-export default MoodScore;
+export default SendMessage;
 

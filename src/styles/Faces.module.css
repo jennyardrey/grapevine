@@ -16,6 +16,9 @@
 	max-height: 100%;
 	max-width: 100%;
 }
+.Faces img:hover {
+	cursor: pointer;
+}
 
 h1 {
 	font-size: 36px;
