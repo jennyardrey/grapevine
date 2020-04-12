@@ -19,14 +19,14 @@ const MoodScoreCard = (props) => {
 	return <div className="mood-score-graphic">
 		<CircularProgressbar
 			value={percentage}
-			text={`${percentage}% 
-			${scoreName}`}
+			text={`${percentage}%`
+			}
 			styles={{
 				root: {},
 				path: {
 					stroke: `rgba(38, 70, 83, ${percentage / 100})`,
 					strokeLinecap: 'butt',
-					// transform: 'rotate(0.25turn)',
+					transform: 'rotate(0.25turn)',
 					transformOrigin: 'center center',
 				},
 				trail: {
@@ -37,7 +37,7 @@ const MoodScoreCard = (props) => {
 				},
 				text: {
 					fill: '#264653',
-					fontSize: '5px'
+					fontSize: '20px'
 				}
 			}}
 		/>
