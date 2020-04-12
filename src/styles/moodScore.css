@@ -5,7 +5,7 @@
 .role-breakdown {
 	display: flex;
 	flex-direction: row;
-
+  justify-content: space-around;
 }
 
 .scores {
@@ -15,4 +15,8 @@
 .role {
 	margin: 20px;
 position: relative;
+}
+h3 {
+	text-align: center;
+	padding: 20px;
 }

@@ -9,6 +9,7 @@ import axios from "axios";
 
 
 import Dashboard from "./components/Dashboard";
+import Nav from "./components/Nav";
 
 
 class App extends Component {
@@ -152,7 +153,15 @@ class App extends Component {
 							/>
 						)}
 					/>
-					<Route exact path="/results" component={Dashboard} />
+					<Route exact
+						path="/results"
+						render={props => (
+							<Dashboard
+								{...props}
+								role={this.state.moodData.role}
+							/>
+						)}
+					/>
 				</Switch>
 			</div>
 		);

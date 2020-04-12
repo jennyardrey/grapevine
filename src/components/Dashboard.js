@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Axios from 'axios';
 import MessageCard from '../components/MessageCard'
 import MoodScoreCard from '../components/MoodScoreCard'
+import Nav from '../components/Nav';
 
 
 class Dashboard extends Component {
@@ -69,6 +70,9 @@ class Dashboard extends Component {
 
 		return (
 			<div>
+				<Nav role={this.props.role} />
+				<h1>Your Results Dashboard</h1>
+				<h3>Below you will see the overall score for your staff happiness, and the breakdown for each role.</h3>
 				<div className="main-score">
 
 					{
@@ -78,23 +82,29 @@ class Dashboard extends Component {
 								scoreName="Staff Happiness Score" />
 							: <div className="error">You currently have no mood</div>
 					}
+					<p>Overall Staff Happiness Score</p>
 				</div>
 
 
 				<div className="role-breakdown">
-
-					<MoodScoreCard
-						moodScore={this.state.bossmood}
-						scoreName="Boss's Happiness Score" />
-
-					<MoodScoreCard
-						moodScore={this.state.assistantmood}
-						scoreName="Assistant's Happiness Score" />
-
-					<MoodScoreCard
-						moodScore={this.state.supervisormood}
-						scoreName="Supervisor's Happiness Score" />
-
+					<div>
+						<MoodScoreCard
+							moodScore={this.state.bossmood}
+							scoreName="Boss's Happiness Score" />
+						<p>Boss's Happiness Score</p>
+					</div>
+					<div>
+						<MoodScoreCard
+							moodScore={this.state.assistantmood}
+							scoreName="Assistant's Happiness Score" />
+						<p>Assistant's Happiness Score</p>
+					</div>
+					<div>
+						<MoodScoreCard
+							moodScore={this.state.supervisormood}
+							scoreName="Supervisor's Happiness Score" />
+						<p>Supervisor's Happiness Score</p>
+					</div>
 				</div>
 				<div className="messages">
 					<h2>Staff messages</h2>
