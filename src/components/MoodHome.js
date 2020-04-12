@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import Faces from "./Faces";
-import MoodScore from "./MoodScore";
+import SendMessage from "./SendMessage";
 import "../styles/MoodHome.css"
 import Nav from "../components/Nav";
 
@@ -10,7 +10,7 @@ const MoodHome = props => {
 		<div>
 			<Nav role={props.role} />
 			{props.faces ? (
-				<MoodScore
+				<SendMessage
 					message={props.message}
 					send={props.submitMessage}
 					toggle={props.toggle}
