@@ -2,8 +2,9 @@ body {
 	background-color: #02C39A;
 }
 img {
-	width: 40vw;
+	width: 70vw;
 	margin: auto;
+	margin-top: 28px;
 }
 .login-page {
 	max-height: 100vh;
@@ -74,4 +75,12 @@ margin: auto;
 
 button {
 	
+}
+
+@media screen and (min-width: 800px) {
+	img {
+	width: 40vw;
+	margin: auto;
+	margin-top: 5px;
+}
 }

@@ -23,7 +23,7 @@ class Dashboard extends Component {
 
 		Axios.get('https://boiling-meadow-46426.herokuapp.com/messages')
 			.then(response => {
-				console.log(response);
+
 				this.setState({
 					messages: response.data,
 				})
@@ -69,12 +69,11 @@ class Dashboard extends Component {
 
 		return (
 			<div>
-
 				<div className="main-score">
+
 					{
 						this.state.moodScore && this.state.moodScore.length > 0 ?
-
-							<MoodScoreCard
+							< MoodScoreCard
 								moodScore={this.state.moodScore}
 								scoreName="Staff Happiness Score" />
 							: <div className="error">You currently have no mood</div>
@@ -103,7 +102,7 @@ class Dashboard extends Component {
 						this.state.messages && this.state.messages.length > 0 ?
 							this.state.messages.map(message => (
 								<MessageCard key={message._id}
-									{...message} />
+									message={message.message} user={message.user} />
 							)) : <div className="error">You currently have no messages</div>
 					}
 				</div>
