@@ -16,7 +16,8 @@ const Nav = props => {
 
 				<ul className="Links">
 					<NavLink to="/" className="navlinks">Logout</NavLink>
-					<NavLink to="/Documents" className="navlinks">
+					<NavLink to="/mood-home" className="navlinks">Home</NavLink>
+					<NavLink to="/documents" className="navlinks">
 						Documents
 					</NavLink>
 					{props.role === "Boss" ? (
