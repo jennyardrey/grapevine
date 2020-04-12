@@ -7,14 +7,14 @@ const MessageCard = (props) => {
 	}
 		= props;
 
-	const name = user.name;
+	const name = (user) ? user.name : 'Anon';
 	console.log(name)
 	return <div className="message-card">
 		<div className="message">
 			{message} </div>
 
 		<div className="username">
-			{name}
+			- {name}
 		</div>
 	</div>
 
