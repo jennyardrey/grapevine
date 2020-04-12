@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Axios from 'axios';
 import MessageCard from '../components/MessageCard'
 import MoodScoreCard from '../components/MoodScoreCard'
+import Nav from '../components/Nav';
 
 
 class Dashboard extends Component {
@@ -69,6 +70,9 @@ class Dashboard extends Component {
 
 		return (
 			<div>
+				<Nav role={this.props.role} />
+				<h1>Your Results Dashboard</h1>
+				<h3>Below you will see the overall score for your staff happiness, and the breakdown for each role.</h3>
 				<div className="main-score">
 
 					{
