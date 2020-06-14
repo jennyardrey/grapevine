@@ -1,0 +1,13 @@
+#doc-link {
+	padding: 20px;
+	border: 1px solid black;
+	margin: 20px;
+	background-color: white;
+	text-align: center;
+	width: fit-content;
+	display: inline-block
+}
+.doc-module {
+	text-align: center;
+
+}
