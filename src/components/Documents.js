@@ -2,14 +2,12 @@ import React from "react";
 import "../styles/Documents.css";
 import pdficon from "./images/pdficon.png";
 import viewicon from "./images/view.png"
-import Nav from "./Nav";
 
 const Documents = (props) => {
 
 
 	return (
 		<div className="doc-page">
-			<Nav role={props.role} />
 			<h2 className="doc-intro-text">Your Documents</h2>
 			<p className="doc-intro-text">Here you will find all the documents relevent to your job. This includes the latest weekly bulletin and the latest updates to the business in response to COVID-19. These should be checked regularly.
 			</p>

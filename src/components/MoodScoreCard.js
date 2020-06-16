@@ -6,7 +6,7 @@ import 'react-circular-progressbar/dist/styles.css';
 const MoodScoreCard = (props) => {
 	const {
 		moodScore,
-		scoreName
+		
 	}
 		= props;
 

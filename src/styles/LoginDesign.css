@@ -1,6 +1,4 @@
-body {
-	background-color: #02C39A;
-}
+
 img {
 	width: 70vw;
 	margin: auto;
@@ -11,9 +9,7 @@ img {
 	display: flex;
 	flex-direction: column;
 }
-h1 {
-	display: none;
-}
+
 .login-form {
 	position:absolute;
 	left:50%;

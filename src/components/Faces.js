@@ -11,52 +11,32 @@ const faces = props => {
 	const { click } = props;
 
 	return (
-		<div>
-			<h3>How are you feeling today?</h3>
-			<div className={classes.Faces}>
-				<button>
-					<img
-						onClick={click}
-						src={face1}
-						alt=""
-						name="1"
-					/>
-				</button>
-				<button>
-					<img
-						src={face2}
-						alt=""
-						onClick={click}
-						name="2"
-					/>
-				</button>
-				<button>
-					<img
-						src={face3}
-						alt=""
-						onClick={click}
-						name="3"
-					/>
-				</button>
-				<button>
-					<img
-						src={face4}
-						alt=""
-						onClick={click}
-						name="4"
-					/>
-				</button>
-				<button>
-					<img
-						src={face5}
-						alt=""
-						onClick={click}
-						name="5"
-					/>
-				</button>
-			</div>
-		</div>
-	);
+        <div className={classes['faces-container']}>
+            <h1>If we don't know, we can't help</h1>
+            <div className={classes['step-title']}>
+                <h1>Step One</h1>
+            </div>
+           
+            <p>Select a face that best describes how you are feeling today </p>
+            <div className={classes.Faces}>
+                <button>
+                    <img onClick={click} src={face1} alt='' name='1' />
+                </button>
+                <button>
+                    <img src={face2} alt='' onClick={click} name='2' />
+                </button>
+                <button>
+                    <img src={face3} alt='' onClick={click} name='3' />
+                </button>
+                <button>
+                    <img src={face4} alt='' onClick={click} name='4' />
+                </button>
+                <button>
+                    <img src={face5} alt='' onClick={click} name='5' />
+                </button>
+            </div>
+        </div>
+    );
 };
 
 faces.propTypes = {

@@ -1,0 +1,24 @@
+.WelcomeDialog .btn {
+    text-align: center;
+    background-color: #1C808F;
+    color:white;
+}
+.WelcomeDialog .btn:hover {
+    text-align: center;
+    background-color: white;
+    color:#1C808F;
+}
+
+#title  h2{
+    color:teal;
+    text-align: center;
+    font-size: 35px !important;
+}
+
+.WelcomeDialog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
