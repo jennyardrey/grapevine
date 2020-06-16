@@ -8,7 +8,6 @@ const Documents = () => {
 
 	return (
         <div className='doc-module'>
-            <h2 className='doc-mod-text'>My Documents</h2>
             <p className='doc-mod-text'>
                 Find more information regarding what we as a business are doing
                 during covid and all other documents relevant to your employment

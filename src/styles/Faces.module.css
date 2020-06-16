@@ -13,9 +13,14 @@
 
 }
 
-h1 {
+.faces-container h1 {
 	color:white;
 	text-transform: uppercase;
+	
+
+	
+	
+	
 }
 
 .Faces img {
@@ -26,11 +31,12 @@ h1 {
 .Faces img:hover {
 	cursor: pointer;
 }
-
-
-p {
-	text-align: center;
+.face-p {
+	color:white;
+	padding:10px;
 }
+
+
 button {
 	background-color: transparent;
 	border: none;
@@ -64,13 +70,24 @@ button {
 	
 }
 
-.step-title h1 {
-	color:white;
-}
+
 
 
 @media (max-width:768px) {
 	.Faces {
 height:20%;
 	}
+	.faces-container h1 {
+	color:white;
+	text-transform: uppercase;
+	width:80%;
+	text-align: center;
+	
+
+	
+
+	
+	
+	
+}
 }

@@ -14,3 +14,16 @@ align-items: center;
 	font-size: 14px;
 	padding: 10px;
 }
+
+@media (max-width:768px) {
+	.mood-score-graphic {
+		display: flex;
+		flex-direction: column;
+		
+		
+	}
+	.CircularProgressbar {
+		width:60%;
+	}
+	
+}

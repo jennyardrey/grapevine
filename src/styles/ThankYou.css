@@ -1,16 +1,30 @@
 .thankyou-message {
+	display:flex;
+	justify-content: center;
+	align-items: center;
 	max-width: 100vh;
 	margin: auto;
 	padding: 20px;
 	background-color: white;
+	border-radius: 10px;
+	height:700px;
 }
 .thankyou-text {
 	margin: auto;
 	text-align: center;
 	padding: 40px;
+	color:#1C808F;
 }
 .back-btn {
   margin: auto;
   padding-top: 100px;
   text-align: center;
+}
+
+.thankyou-paragraph {
+	text-align: center;
+}
+
+.face-p {
+	color:white;
 }

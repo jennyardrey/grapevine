@@ -10,14 +10,27 @@
 .icon:hover {
 	cursor: pointer;
 }
+.doc-intro-title {
+	
+	text-align:center;
+}
+
+.doc-intro-text {
+	width:70%;
+	margin:auto;
+	padding:10px;
+	box-sizing: border-box;
+}
 
 .doc-box {
-	border: 1px solid black;
+	border:2px solid black;
 	border-radius: 10px;
 	margin: 30px;
 	display: flex;
 	flex-direction: row;
-		background-color: rgb(255, 255, 255, 0.75);
+		background-color: #1C808F;
+color:white;
+box-shadow: 3px 3px 3px rgb(71, 71, 71);
 align-items: center;
 justify-content: space-between;
 }

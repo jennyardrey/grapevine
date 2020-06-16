@@ -9,17 +9,22 @@ const SendMessage = props => {
 	return (
         <div>
             {props.messageSent === false ? (
-                <div className={classes.MoodScore}>
+                <section className={classes.MoodScore}>
                     <div className={classes['step-title']}>
-                        <h1>Step 2</h1>
+                        <h1 className={classes['section-title']}>Step Two</h1>
                     </div>
                     <p>
                         We know you can't always describe your moods in just one
                         image so here you can a little more room to express
                         yourself, please use this responsibly and
                         constructively.
-                        <p>You can also use this if you have issues that don't necessarily fit into mood but overall work place environment</p>
                     </p>
+                    <p>
+                        You can also use this if you have issues that don't
+                        necessarily fit into mood but overall work place
+                        environment
+                    </p>
+
                     <textarea type='text' onChange={message} name='message' />
                     <input
                         type='checkbox'
@@ -37,9 +42,9 @@ const SendMessage = props => {
                         </span>
                     )}
                     <button onClick={props.send}>Send</button>
-                </div>
+                </section>
             ) : (
-                <div className='thankyou-messaage'>
+                <div className={classes['thankyou-messaage']}>
                     <ThankYou />
                 </div>
             )}

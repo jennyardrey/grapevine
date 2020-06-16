@@ -1,6 +1,6 @@
 .main-text {
 	
-	height:85vh;
+	height:80vh;
 	padding: 20px 50px;
 	text-align: center;
 	background-image: linear-gradient(#fafafa10, #dad7d600), url("https://images.pexels.com/photos/273238/pexels-photo-273238.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=550&w=1260");
@@ -18,13 +18,21 @@
 .main-text h1 {
 	color: #1C808F;
 	font-size: 2rem;
+	
 }
 
 
 .main-text .covid-bulitin {
-	width:500px;
+	width:60%;
 	height:300px;
 	background-color: rgba(255, 255, 255, 0.89);
+	position: relative;
+	border-radius: 10px;
+}
+
+.main-text .covid-bulitin h3 {
+	text-align: left;
+	padding-left:10px;
 }
 
 .main-text .begin-prompt {
@@ -82,9 +90,56 @@ color: #1C808F;
 	border-radius: 10px;
 	
 }
+.badge {
+	position: absolute !important;
+	left:-10px;
+	top:-20px;
+	font-size:26px !important;
+}
 
 .step-title h1 {
 	color:white;
+	text-transform: uppercase;
+	font-size:32px;
+}
+.col-email {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.col-email p {
+	margin:2px;
+	padding:2px;
+}
+.email-notification {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 10px;
+	box-shadow:inset 2px 1px 2px 2px rgba(185, 183, 183, 0.719);
+	box-sizing: border-box;
+	padding:5px;
+	height:130px;
+	width:90%;
+	margin:auto;
+	overflow-y: scroll;
+	
+	
+
+}
+
+
+.email-notification p {
+	padding:8px;
+	cursor: pointer;
+}
+.email-notification p:active {
+	background-color: rgba(182, 180, 180, 0.438);
+}
+.email-notification p span{
+	
+	font-style: italic;
 }
 
 @media ( max-width:1000px) {

@@ -8,7 +8,7 @@ const Documents = (props) => {
 
 	return (
 		<div className="doc-page">
-			<h2 className="doc-intro-text">Your Documents</h2>
+			<h2 className="doc-intro-title">Your Documents</h2>
 			<p className="doc-intro-text">Here you will find all the documents relevent to your job. This includes the latest weekly bulletin and the latest updates to the business in response to COVID-19. These should be checked regularly.
 			</p>
 			<p className="doc-intro-text">	If you wish to make a complaint or dispute something, check your job description and code of conduct first.</p>

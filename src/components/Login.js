@@ -9,7 +9,7 @@ const login = props => {
 	return (
         <div className='login-page'>
             <img src={logo} alt='logo' />
-            <h1>Grapevine</h1>
+           {/*  <h1>Grapevine</h1> */}
 
             <div className='login-form'>
                 <form className='login' onSubmit={handleOnSubmit}>
