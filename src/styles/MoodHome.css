@@ -51,6 +51,9 @@
 font-size:4rem;
 color: #1C808F;
 }
+.space {
+	height: 700px;
+}
 
 .step-3 {
 	height:80vh;
