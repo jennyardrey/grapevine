@@ -41,3 +41,12 @@
 .Navbar .Navbar-links .navlinks .nav-icon{
 padding:.2rem;
 }
+
+
+@media (max-width:768px) {
+	.Navbar .Navbar-links .navlinks {
+	font-size:12px;
+	margin:2px;
+
+}
+}

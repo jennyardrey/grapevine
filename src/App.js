@@ -22,7 +22,7 @@ class App extends Component {
             moodScore: null,
             message: null,
         },
-        isLoggedIn: true,
+        isLoggedIn: false,
         facesClicked: false,
         anon: false,
         messageSent: false,
