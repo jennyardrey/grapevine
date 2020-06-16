@@ -10,6 +10,8 @@ import axios from "axios";
 
 import Dashboard from "./components/Dashboard";
 import Documents from "./components/Documents";
+import Nav from './components/Nav';
+import Footer from './components/Footer';
 
 class App extends Component {
 	state = {
@@ -23,7 +25,8 @@ class App extends Component {
 		isLoggedIn: false,
 		facesClicked: false,
 		anon: false,
-		messageSent: false
+		messageSent: false,
+		modalClose: true,
 	};
 
 	componentDidUpdate(prevProps, prevState) {
@@ -118,61 +121,75 @@ class App extends Component {
 			anon: !this.state.anon
 		});
 	};
+
+	onModalClose =() => {
+		console.log('hello')
+	this.setState({
+			modalClose: false
+		}) 
+	}
 	render() {
 		return (
-			<div className="App">
+            <div className='App'>
+                <Nav role={this.state.moodData.role} isLoggedIn={this.state.isLoggedIn} />
+                <Switch>
+                    <Route
+                        exact
+                        path='/'
+                        render={(props) => (
+                            <Login
+                                {...props}
+                                input={this.inputChangeHandler}
+                                login={this.loginHandler}
+                            />
+                        )}
+					/>
+				
 
-				<Switch>
-					<Route
-						exact
-						path="/"
-						render={props => (
-							<Login
+                    <Route
+                        exact
+                        path='/mood-home'
+                        render={(props) => (
+                            <MoodHome
 								{...props}
-								input={this.inputChangeHandler}
-								login={this.loginHandler}
-							/>
-						)}
-					/>
-
-					<Route
-						exact
-						path="/mood-home"
-						render={props => (
-							<MoodHome
-								{...props}
-								click={this.moodScoreHandler}
-								faces={this.state.facesClicked}
-								message={this.inputChangeHandler}
-								submitMessage={this.submitMessageHandler}
-								toggle={this.onToggleHandler}
-								anon={this.state.anon}
-								messageSent={this.state.messageSent}
+								name={this.state.moodData.name}
+                                click={this.moodScoreHandler}
+                                faces={this.state.facesClicked}
+                                message={this.inputChangeHandler}
+                                submitMessage={this.submitMessageHandler}
+                                toggle={this.onToggleHandler}
+                                anon={this.state.anon}
+                                messageSent={this.state.messageSent}
 								role={this.state.moodData.role}
-							/>
-						)}
-					/>
-					<Route exact
-						path="/results"
-						render={props => (
-							<Dashboard
-								{...props}
-								role={this.state.moodData.role}
-							/>
-						)}
-					/>
-					<Route exact
-						path="/documents"
-						render={props => (
-							<Documents
-								{...props}
-								role={this.state.moodData.role}
-							/>
-						)}
-					/>
+								modal={this.state.modalClose}
+								modalClose={this.onModalClose}
+                            />
+                        )}
+                    />
+                    <Route
+                        exact
+                        path='/results'
+                        render={(props) => (
+                            <Dashboard
+                                {...props}
+                                role={this.state.moodData.role}
+                            />
+                        )}
+                    />
+                    <Route
+                        exact
+                        path='/documents'
+                        render={(props) => (
+                            <Documents
+                                {...props}
+                                role={this.state.moodData.role}
+                            />
+                        )}
+                    />
 				</Switch>
-			</div>
-		);
+				
+            </div>
+        );
 	}
 }
 export default App;
