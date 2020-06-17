@@ -1,0 +1,88 @@
+.resource-page {
+	width: 100vw;
+	display: grid;
+  grid-template-columns: 33% 1fr;
+  grid-template-rows: 1fr 10fr;
+  gap: 1px 1px;
+	grid-template-areas: "title title" "menu content";
+	height: 80vh;
+align-items: center;
+}
+
+.resource-page h2 {
+	grid-area: title;
+	padding: 30px;
+}
+
+h3 {
+	grid-column-start: 1;
+	grid-column-end: -1;
+}
+
+.resource-menu {
+	display: flex;
+	flex-direction: column;
+text-align: center;
+	height: max-content;
+	grid-column-start: 1;
+	grid-row-start: 2;
+	margin: 20px;
+}
+.resource-menu button {
+border-radius: 10px;
+width: 100%;
+padding: 10px;
+background-color: white;
+margin: 10px;
+font-size: 16px;
+  transition: background-color 0.5s ease;
+}
+
+.resource-menu button:hover {
+	cursor: pointer;
+	background-color: #1C808F;
+	color: white;
+	
+}
+
+.step-title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top:-30px;
+	left: 60px;
+	background-color:#1C808F;
+	width: 200px;
+	height:40px;
+	padding:10px;
+	border-radius: 10px;
+	
+}
+
+.step-title h1 {
+	color:white;
+}
+.resource-content {
+		grid-column-start: 2;
+		grid-row-start: 2;
+		margin: 20px;
+}
+
+.resource-content p {
+padding: 20px;
+	text-align: center;
+background-color: white;
+animation: slide-in 1s ease;
+}
+
+@keyframes slide-in {
+0% {
+	opacity: 0;
+	transform: translateX(100px)
+}
+100% {
+	opacity: 1;
+	transform: translateY(0);
+}
+}

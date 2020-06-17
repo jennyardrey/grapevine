@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import Faces from "./Faces";
 import DocumentsWidget from "./DocumentsModule"
 import SendMessage from "./SendMessage";
+import Resources from "./Resources"
 import "../styles/MoodHome.css"
 import WelcomeDialog from './WelcomeDialog'
 import Footer from './Footer'
@@ -50,9 +51,9 @@ const MoodHome = props => {
 					messageSent={props.messageSent}
 				/>
 				<div className='step-3'>
-					<div className='step-title'>
-						<h1>Step Three</h1>
-					</div>
+
+					<Resources />
+
 				</div>
 			</Fragment>
 
