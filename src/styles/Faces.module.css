@@ -13,9 +13,14 @@
 
 }
 
-h1 {
+.faces-container h1 {
 	color:white;
 	text-transform: uppercase;
+	
+
+	
+	
+	
 }
 
 .Faces img {
@@ -27,10 +32,17 @@ h1 {
 	cursor: pointer;
 }
 
-
-p {
+.face-header {
+	text-align: center;
+	margin:0 auto 30px;
+}
+.face-paragraph {
+	color:white;
+	padding:10px;
 	text-align: center;
 }
+
+
 button {
 	background-color: transparent;
 	border: none;
@@ -64,13 +76,30 @@ button {
 	
 }
 
-.step-title h1 {
-	color:white;
+.thankyou-message {
+text-align: center;
+background-color: white;
+box-sizing: border-box;
+padding:20px;
+margin:10px;
 }
 
 
+
+
 @media (max-width:768px) {
-	.Faces {
-height:20%;
-	}
+
+	.faces-container h1 {
+	color:white;
+	text-transform: uppercase;
+	width:80%;
+	text-align: center;
+	
+
+	
+
+	
+	
+	
+}
 }

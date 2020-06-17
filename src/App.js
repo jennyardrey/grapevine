@@ -11,7 +11,7 @@ import axios from "axios";
 import Dashboard from "./components/Dashboard";
 import Documents from "./components/Documents";
 import Nav from './components/Nav';
-import Footer from './components/Footer';
+
 
 class App extends Component {
 	state = {
@@ -27,7 +27,36 @@ class App extends Component {
 		anon: false,
 		messageSent: false,
 		modalClose: true,
-	};
+		 messages: [
+            {
+                message: `- I know it's a scary time right now and we
+                                    are all having to get to a new type of work
+                                    style and environment which makes it harder
+                                    for me to know how you are all coping so
+									please let me know.`,
+                sender: 'Jenny Ardrey',
+            },
+            {
+                message: `- I know it's a scary time right now and we
+                                    are all having to get to a new type of work
+                                    style and environment which makes it harder
+                                    for me to know how you are all coping so
+									please let me know.`,
+                sender: 'Aenny Jrdrey',
+            },
+		],
+		count:2
+    };
+
+	
+notificationsHandler = (ind) => {
+	const messages = [...this.state.messages]
+	const removedMess = messages.splice(ind,1)
+ 	this.setState({
+		messages: messages,
+		count: this.state.count ? this.state.count - 1 : 0
+	}) 
+	}
 
 	componentDidUpdate(prevProps, prevState) {
 		const moodscore = {
@@ -153,16 +182,20 @@ class App extends Component {
                             <MoodHome
 								{...props}
 								name={this.state.moodData.name}
-                                click={this.moodScoreHandler}
-                                faces={this.state.facesClicked}
-                                message={this.inputChangeHandler}
-                                submitMessage={this.submitMessageHandler}
-                                toggle={this.onToggleHandler}
-                                anon={this.state.anon}
-                                messageSent={this.state.messageSent}
+								click={this.moodScoreHandler}
+								faces={this.state.facesClicked}
+								message={this.inputChangeHandler}
+								submitMessage={this.submitMessageHandler}
+								toggle={this.onToggleHandler}
+								anon={this.state.anon}
+								messageSent={this.state.messageSent}
 								role={this.state.moodData.role}
 								modal={this.state.modalClose}
 								modalClose={this.onModalClose}
+								count={this.state.count}
+								notificationsHandler={this.notificationsHandler}
+								messages={this.state.messages}
+								
                             />
                         )}
                     />

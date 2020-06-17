@@ -18,8 +18,13 @@ const SendMessage = props => {
                         image so here you can a little more room to express
                         yourself, please use this responsibly and
                         constructively.
-                        <p>You can also use this if you have issues that don't necessarily fit into mood but overall work place environment</p>
                     </p>
+                    <p>
+                        You can also use this if you have issues that don't
+                        necessarily fit into mood but overall work place
+                        environment
+                    </p>
+
                     <textarea type='text' onChange={message} name='message' />
                     <input
                         type='checkbox'

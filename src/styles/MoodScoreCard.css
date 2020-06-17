@@ -1,3 +1,4 @@
+  
 .mood-score-graphic {
 display: grid;
 width: 200px;
@@ -13,4 +14,17 @@ align-items: center;
 .score-detail {
 	font-size: 14px;
 	padding: 10px;
+}
+
+@media (max-width:768px) {
+	.mood-score-graphic {
+		display: flex;
+		flex-direction: column;
+		
+		
+	}
+	.CircularProgressbar {
+		width:60%;
+	}
+	
 }

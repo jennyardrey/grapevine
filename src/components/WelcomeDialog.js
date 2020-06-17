@@ -27,7 +27,7 @@ const WelcomeDialog = (props) => {
             open={open}
         >
             <DialogTitle id='title' >
-                Welcome to Grapevine.
+                Welcome to Grapevine!
             </DialogTitle>
             <DialogContent>
                 <div className='WelcomeDialog'>

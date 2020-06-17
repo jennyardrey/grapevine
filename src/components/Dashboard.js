@@ -70,67 +70,88 @@ class Dashboard extends Component {
 	render() {
 
 		return (
-			<div className='Dashboard'>
-				{/* <h3>
+            <div className='Dashboard-container'>
+                {/* <h3>
                     Below you will see the overall score for your staff
                     happiness, and the breakdown for each role.
                 </h3> */}
-				<h1>Your Results Dashboard</h1>
-				<Paper className='main-score' elevation={10}>
+                <h1 className='dashboard-title'>Your Results Dashboard</h1>
+                <Paper className='overall-score' elevation={10}>
+                    {this.state.moodScore && this.state.moodScore.length > 0 ? (
+                        <MoodScoreCard
+                            moodScore={this.state.moodScore}
+                            scoreName='Staff Happiness Score'
+                        />
+                    ) : (
+                        <div className='error'>You currently have no mood</div>
+                    )}
+                    <p className='overall-score-label'>
+                        Overall Staff Happiness Score
+                    </p>
+                </Paper>
 
-					{this.state.moodScore && this.state.moodScore.length > 0 ? (
-						<MoodScoreCard
-							moodScore={this.state.moodScore}
-							scoreName='Staff Happiness Score'
-						/>
-					) : (
-							<div className='error'>You currently have no mood</div>
-						)}
-					<p className='score-label'>Overall Staff Happiness Score</p>
-				</Paper>
+                <div className='role-score-breakdown-container'>
+                    <Paper
+                        elevation={10}
+                        className='individial-score-card'
+                    >
+                        <div className='row'>
+                            <MoodScoreCard
+                                moodScore={this.state.bossmood}
+                                scoreName="Boss's Happiness Score"
+                            />
+                        </div>
 
-				<div className='role-breakdown'>
-					<Paper elevation={10} className='paper'>
-						<div className='row'>
-							<MoodScoreCard
-								moodScore={this.state.bossmood}
-								scoreName="Boss's Happiness Score"
-							/>
-						</div>
-
-						<p className='score-label'>Boss's Happiness Score</p>
-					</Paper>
-					<Paper className='paper' elevation={10}>
-						<MoodScoreCard
-							moodScore={this.state.assistantmood}
-							scoreName="Assistant's Happiness Score"
-						/>
-						<p className='score-label'>
-							Assistant's Happiness Score
+                        <p className='card-label'>Boss's Happiness Score</p>
+                    </Paper>
+                    <Paper
+                        className='individial-score-card'
+                        elevation={10}
+                    >
+                        <MoodScoreCard
+                            moodScore={this.state.assistantmood}
+                            scoreName="Assistant's Happiness Score"
+                        />
+                        <p className='card-label'>
+                            Assistant's Happiness Score
                         </p>
-					</Paper>
-					<Paper className='paper' elevation={10}>
-						<MoodScoreCard
-							moodScore={this.state.supervisormood}
-							scoreName="Supervisor's Happiness Score"
-						/>
-						<p className='score-label'>
-							Supervisor's Happiness Score
+                    </Paper>
+                    <Paper
+                        className='individial-score-card'
+                        elevation={10}
+                    >
+                        <MoodScoreCard
+                            moodScore={this.state.supervisormood}
+                            scoreName="Supervisor's Happiness Score"
+                        />
+                        <p className='card-label'>
+                            Supervisor's Happiness Score
                         </p>
-					</Paper>
-				</div>
-				{<div className="messages">
-					<h2>Staff messages</h2>
-					{
-						this.state.messages && this.state.messages.length > 0 ?
-							this.state.messages.map(message => (
-								<MessageCard key={message._id}
-									message={message.message} user={message.user} />
-							)) : <div className="error">You currently have no messages</div>
-					}
-				</div>}
-			</div>
-		);
+                    </Paper>
+                </div>
+                <div className='messages-container'>
+                    <div className='messages-title-container'>
+                        <h1 className='messages-title-3'>Staff Messages</h1>
+                    </div>
+                    <div className='messages'>
+                        {this.state.messages &&
+                        this.state.messages.length > 0 ? (
+                            this.state.messages.map((message) => (
+                                <MessageCard
+                                    key={message._id}
+                                    message={message.message}
+                                    user={message.user}
+                                />
+                            ))
+                        ) : (
+                            <div className='error'>
+                                You currently have no messages
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </div>
+        );
 
 	}
 }

@@ -1,5 +1,4 @@
-.main-text {
-	
+.section-container {
 	height:85vh;
 	padding: 20px 50px;
 	text-align: center;
@@ -15,19 +14,34 @@
 	
 }
 
-.main-text h1 {
+.section-container .section-welcome-message {
 	color: #1C808F;
 	font-size: 2rem;
 }
 
 
-.main-text .covid-bulitin {
-	width:500px;
-	height:300px;
+.section-container .notification-bulitin {
+	width:60%;
+	padding:20px;
 	background-color: rgba(255, 255, 255, 0.89);
+	position: relative;
+	border-radius: 10px;
+}
+.section-container .notification-bulitin h3 {
+	text-align: left;
+	padding-left:10px;
 }
 
-.main-text .begin-prompt {
+.badge {
+	position: absolute !important;
+	left:-10px;
+	top:-20px;
+	font-size:26px !important;
+}
+
+
+
+.section-container .begin-prompt {
 	height:100%;
 	width:100%;
 	display: flex;
@@ -36,7 +50,43 @@
 	align-items: center;
 
 }
-.main-text .begin-prompt h1 {
+.col-email {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.col-email p {
+	margin:2px;
+	padding:2px;
+}
+.email-notification {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 10px;
+	box-shadow:inset 2px 1px 2px 2px rgba(185, 183, 183, 0.719);
+	box-sizing: border-box;
+	padding:5px;
+	height:130px;
+	width:90%;
+	margin:auto;
+	overflow-y: scroll;
+
+}
+
+.email-notification p {
+	padding:8px;
+	cursor: pointer;
+}
+.email-notification p:active {
+	background-color: rgba(182, 180, 180, 0.438);
+}
+.email-notification p span{
+	
+	font-style: italic;
+}
+.section-container .begin-prompt h1 {
 	
 	padding:10px;
 	background-color:#1C808F;
@@ -47,7 +97,7 @@
 	border-radius: 10px;;
 }
 
-.main-text .begin-prompt .arrow{
+.section-container .begin-prompt .arrow{
 font-size:4rem;
 color: #1C808F;
 }
@@ -70,7 +120,7 @@ color: #1C808F;
 
 	
 }
-.step-3 .step-title {
+ .step-3 .step-title {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -84,15 +134,13 @@ color: #1C808F;
 	padding:10px;
 	border-radius: 10px;
 	
-}
+} 
 
-.step-title h1 {
-	color:white;
-}
+
 
 @media ( max-width:1000px) {
 
-.main-text .begin-prompt h1 {
+.section-container .begin-prompt h1 {
 	
 	font-size:16px;
 }
@@ -117,14 +165,15 @@ color: #1C808F;
 	border-radius: 10px;
 	
 }
-.main-text .covid-bulitin {
+.section-container .notification-bulitin {
 	padding:10px;
 	height:fit-content;
 	margin:auto;
 	background-color: rgba(255, 255, 255, 0.89);
 	border-radius: 10px;
+	width:80%;
 }
-.main-text {
+.section-container {
 	margin:0;
 	height:85vh;
 	text-align: center;
@@ -139,7 +188,7 @@ color: #1C808F;
 	align-items: center;
 }
 
-.main-text .begin-prompt {
+.section-container .begin-prompt {
 	
 	width:100%;
 	display: flex;
