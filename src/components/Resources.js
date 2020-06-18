@@ -30,7 +30,7 @@ class Resources extends Component {
 
 		return (
 			<div className="resource-page">
-				<div className={'step-title'}>
+				<div className='step-title'>
 					<h1>Step Three</h1>
 				</div>
 				<h2>Feeling stressed? We've put together some things that could help you feel a bit more relaxed at work and at home.</h2>

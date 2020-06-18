@@ -11,3 +11,12 @@ color:white;
 font-size:16px;
 margin:0;
 }
+
+@media (max-width:768px) {
+	.doc-btn {
+
+font-size:11px;
+
+padding:1px
+}
+}

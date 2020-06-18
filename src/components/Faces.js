@@ -15,7 +15,7 @@ const faces = props => {
 	return (
         <div className={classes['faces-container']}>
             <div className={classes['step-title']}>
-                <h1>Step One</h1>
+                <h1 className={classes['step-h1']}>Step One</h1>
             </div>
             <div>
                 <h1 className={classes['face-header']}>

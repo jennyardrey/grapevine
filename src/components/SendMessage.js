@@ -11,7 +11,7 @@ const SendMessage = props => {
             {props.messageSent === false ? (
                 <div className={classes.MoodScore}>
                     <div className={classes['step-title']}>
-                        <h1>Step 2</h1>
+                        <h1>Step Two</h1>
                     </div>
                     <p>
                         We know you can't always describe your moods in just one

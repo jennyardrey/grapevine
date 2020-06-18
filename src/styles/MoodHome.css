@@ -151,11 +151,28 @@ color: #1C808F;
 
 
 @media (max-width:768px) {
-	.step-3 .step-title {
+
+	.email-notification {
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
 	align-items: center;
-	position: absolute;
+	border-radius: 10px;
+	box-shadow:inset 2px 1px 2px 2px rgba(185, 183, 183, 0.719);
+	box-sizing: border-box;
+	padding:5px;
+	height:80px;
+	width:90%;
+	margin:auto;
+	overflow-y: scroll;
+
+}
+
+	.section-container .section-welcome-message {
+	color: #1C808F;
+	font-size: 16px;
+}
+	.step-3 .step-title {
+	
 	top:-30px;
 	left: 25%;
 	 background-color:#1C808F; 
@@ -166,13 +183,22 @@ color: #1C808F;
 	border-radius: 10px;
 	
 }
+
+.badge {
+	position: absolute !important;
+	left:-10px;
+	top:-20px;
+	font-size:16px !important;
+}
+
 .section-container .notification-bulitin {
-	padding:10px;
+	font-size:10px;
+	padding:5px;
 	height:fit-content;
-	margin:auto;
+	
 	background-color: rgba(255, 255, 255, 0.89);
 	border-radius: 10px;
-	width:80%;
+	width:90%;
 }
 .section-container {
 	margin:0;
@@ -196,6 +222,46 @@ color: #1C808F;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
+}
+.section-container .begin-prompt .arrow{
+	font-size: 10px;
+
+}
+
+.step-3 {
+	height:100%;
+}
+
+ .step-3 .step-title {
+
+	top:-30px;
+	left: 25%;
+	 
+
+	width: 50%;
+	
+	padding:10px;
+	border-radius: 10px;
+	
+} 
+ .step-3 .step-title h1{
+margin:0;
+padding:0px;
+font-size: 26px;
+	
+} 
+
+.begin-prompt {
+	display: none;
+}
+
+}
+
+@media (max-width:500px) {
+	.section-container .begin-prompt {
+	
+	display: none;
 
 }
 }
