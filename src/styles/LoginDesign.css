@@ -80,3 +80,10 @@ button {
 	margin-top: 5px;
 }
 }
+
+select {
+	background-color: #cccccc;
+	border: 0px;
+	color: white;
+	font-size: 17px;
+}
