@@ -36,12 +36,12 @@ class Resources extends Component {
 				<h2>Feeling stressed? We've put together some things that could help you feel a bit more relaxed at work and at home.</h2>
 				<div className="resource-menu">
 
-					<div><button onClick={() => this.showResource("talk")}>Talking.</button></div>
-					<div><button onClick={() => this.showResource("music")}>Music.</button>
+					<div><button className="small-screen-1" onClick={() => this.showResource("talk")}>Talking.</button></div>
+					<div><button className="small-screen-2" onClick={() => this.showResource("music")}>Music.</button>
 					</div>
-					<div><button onClick={() => this.showResource("meditate")}>Meditating.</button>
+					<div><button className="small-screen-3" onClick={() => this.showResource("meditate")}>Meditating.</button>
 					</div>
-					<div><button onClick={() => this.showResource("call")}>Can't talk to someone at work?</button>
+					<div><button className="small-screen-4" onClick={() => this.showResource("call")}>Can't talk to someone at work?</button>
 					</div>
 				</div>
 				<CSSTransition
