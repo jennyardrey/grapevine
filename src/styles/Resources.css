@@ -95,3 +95,7 @@ border-radius: 10px;
   transform: translateX(350px);
 	transition: opacity 350ms, transform 350ms;
 }
+
+.arrow {
+	color: black;
+}
