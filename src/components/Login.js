@@ -33,6 +33,7 @@ const login = props => {
 							required
 							autoComplete='off'
 						>
+							<option value="Default">Role</option>
 							<option value="Boss">Boss</option>
 							<option value="Assistant">Assistant</option>
 							<option value="Supervisor">Supervisor</option>

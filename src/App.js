@@ -30,19 +30,14 @@ class App extends Component {
 		messages: [
 			{
 				message: `- I know it's a scary time right now and we
-                                    are all having to get to a new type of work
-                                    style and environment which makes it harder
-                                    for me to know how you are all coping so
-									please let me know.`,
-				sender: 'Jenny Ardrey',
+                                    are all having to get used to a new type of work
+                                    style and environment, which makes it harder
+                                    for me to know how you are all coping. Please use this tool to help us all stay in touch. Stay safe!`,
+				sender: 'Team Manager',
 			},
 			{
-				message: `- I know it's a scary time right now and we
-                                    are all having to get to a new type of work
-                                    style and environment which makes it harder
-                                    for me to know how you are all coping so
-									please let me know.`,
-				sender: 'Aenny Jrdrey',
+				message: `- We will have some new starters this month, to help us with our increasing workload. Please give them a hand where you can, and show them what a strong team we are. Don't forget to leave any feedback you have below.`,
+				sender: 'Human Resources',
 			},
 		],
 		count: 2
