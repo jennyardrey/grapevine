@@ -89,6 +89,9 @@ margin:10px;
 
 
 @media (max-width:768px) {
+	.faces-container {
+		height:500px
+	}
 
 	.faces-container h1 {
 	color:white;

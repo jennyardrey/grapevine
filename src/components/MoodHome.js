@@ -3,7 +3,7 @@ import Faces from "./Faces";
 import DocumentsWidget from "./DocumentsModule"
 import SendMessage from "./SendMessage";
 import Resources from "./Resources"
-import "../styles/MoodHome.css"
+import classes from "../styles/MoodHome.module.css"
 import WelcomeDialog from './WelcomeDialog'
 import Footer from './Footer'
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
@@ -41,23 +41,23 @@ const MoodHome = props => {
 					selectedValue={modal}
 				/>
 
-				<div className='section-container'>
-					<h1 className='section-welcome-message'>Welcome {name}</h1>
-					<div className='notification-bulitin'>
+				<div className={classes['section-container']}>
+					<h1 className={classes['section-welcome-message']}>Welcome {name}</h1>
+                    <div className={classes['notification-bulitin']}>
 						<Badge
 							color='secondary'
 							badgeContent={count}
-							className='badge'
+							className={classes['badge']}
 						>
 							<MailIcon style={{ fontSize: 40 }} />
 						</Badge>
 						<h3>Team Updates</h3>
-						<div className='email-notification'>
+						<div className={classes['email-notification']}>
 							{count ? (
 								messages.map((mess, index) => {
 									return (
 										<div
-											className='col-email'
+											className={classes['col-email']}
 											key={index}
 											onClick={() => removeMessage(index)}
 										>
@@ -75,9 +75,9 @@ const MoodHome = props => {
 
 						<DocumentsWidget />
 					</div>
-					<div className='begin-prompt'>
+					<div className={classes['begin-prompt']}>
 						<h1>Let's Begin</h1>
-						<ArrowDownwardIcon className='arrow' />
+                        <ArrowDownwardIcon className={classes['arrow']} />
 					</div>
 				</div>
 				<Faces click={props.click} facesClicked={props.faces} />
@@ -88,7 +88,7 @@ const MoodHome = props => {
 					anon={props.anon}
 					messageSent={props.messageSent}
 				/>
-				<div className='step-3'>
+                <div className={classes['step-3']}>
 					<Resources />
 				</div>
 			</Fragment>
