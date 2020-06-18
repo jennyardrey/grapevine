@@ -77,8 +77,9 @@ button {
 }
 
 .thankyou-message {
+	width: 80vw;
 text-align: center;
-background-color: white;
+color: white;
 box-sizing: border-box;
 padding:20px;
 margin:10px;
