@@ -35,7 +35,7 @@ padding: 10px;
 background-color: white;
 margin: 10px;
 font-size: 16px;
-  transition: background-color 0.5s ease;
+transition: background-color 0.5s ease;
 }
 
 .resource-menu button:hover {
@@ -72,17 +72,26 @@ font-size: 16px;
 .resource-content p {
 padding: 20px;
 	text-align: center;
-background-color: white;
-animation: slide-in 1s ease;
+background-color: rgba(255, 255, 255, 0.7);
+border-radius: 10px;
 }
 
-@keyframes slide-in {
-0% {
-	opacity: 0;
-	transform: translateX(100px)
+
+
+.resource-animation-enter {
+  opacity: 0;
+	transform: translateX(150px)
 }
-100% {
+.resource-animation-enter-active {
 	opacity: 1;
-	transform: translateY(0);
+	transform: translateX(0px);
+  transition: opacity 200ms, transform 350ms;
 }
+.resource-animation-exit {
+  opacity: 1;
+}
+.my-node-exit-active {
+  opacity: 0;
+  transform: translateX(350px);
+	transition: opacity 350ms, transform 350ms;
 }
