@@ -29,15 +29,20 @@ class App extends Component {
 		modalClose: true,
 		messages: [
 			{
-				message: `- I know it's a scary time right now, and we
-                                    are all having to get used to a new type of work
-                                    style and environment, which makes it harder
-                                    for me to know how you are all coping. Please use this tool to help us communicate during these unique times.`,
-				sender: 'The Manager',
+				message: `- I know it's a scary time right now and we
+                                    are all having to get to a new type of work
+                                    style and environment which makes it harder
+                                    for me to know how you are all coping so
+									please let me know.`,
+				sender: 'Jenny Ardrey',
 			},
 			{
-				message: `- There will be some new starters in the coming weeks to elp with our workload. Please help them out if they need it, and don't forget to leave any feedback below.`,
-				sender: 'Human Resources',
+				message: `- I know it's a scary time right now and we
+                                    are all having to get to a new type of work
+                                    style and environment which makes it harder
+                                    for me to know how you are all coping so
+									please let me know.`,
+				sender: 'Aenny Jrdrey',
 			},
 		],
 		count: 2
