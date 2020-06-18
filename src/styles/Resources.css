@@ -99,3 +99,12 @@ border-radius: 10px;
 .arrow {
 	color: black;
 }
+.resource-content a {
+	 color: black;
+	 font-weight: bold;
+	 transition: color 0.2s ease;
+
+}
+.resource-content a:hover {
+	color: #1C808F
+}
