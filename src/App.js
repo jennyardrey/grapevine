@@ -27,35 +27,30 @@ class App extends Component {
 		anon: false,
 		messageSent: false,
 		modalClose: true,
-		 messages: [
-            {
-                message: `- I know it's a scary time right now and we
-                                    are all having to get to a new type of work
-                                    style and environment which makes it harder
-                                    for me to know how you are all coping so
-									please let me know.`,
-                sender: 'Jenny Ardrey',
-            },
-            {
-                message: `- I know it's a scary time right now and we
-                                    are all having to get to a new type of work
-                                    style and environment which makes it harder
-                                    for me to know how you are all coping so
-									please let me know.`,
-                sender: 'Aenny Jrdrey',
-            },
+		messages: [
+			{
+				message: `- I know it's a scary time right now, and we
+                                    are all having to get used to a new type of work
+                                    style and environment, which makes it harder
+                                    for me to know how you are all coping. Please use this tool to help us communicate during these unique times.`,
+				sender: 'The Manager',
+			},
+			{
+				message: `- There will be some new starters in the coming weeks to elp with our workload. Please help them out if they need it, and don't forget to leave any feedback below.`,
+				sender: 'Human Resources',
+			},
 		],
-		count:2
-    };
+		count: 2
+	};
 
-	
-notificationsHandler = (ind) => {
-	const messages = [...this.state.messages]
-	const removedMess = messages.splice(ind,1)
- 	this.setState({
-		messages: messages,
-		count: this.state.count ? this.state.count - 1 : 0
-	}) 
+
+	notificationsHandler = (ind) => {
+		const messages = [...this.state.messages]
+		const removedMess = messages.splice(ind, 1)
+		this.setState({
+			messages: messages,
+			count: this.state.count ? this.state.count - 1 : 0
+		})
 	}
 
 	componentDidUpdate(prevProps, prevState) {
@@ -151,35 +146,35 @@ notificationsHandler = (ind) => {
 		});
 	};
 
-	onModalClose =() => {
+	onModalClose = () => {
 		console.log('hello')
-	this.setState({
+		this.setState({
 			modalClose: false
-		}) 
+		})
 	}
 	render() {
 		return (
-            <div className='App'>
-                <Nav role={this.state.moodData.role} isLoggedIn={this.state.isLoggedIn} />
-                <Switch>
-                    <Route
-                        exact
-                        path='/'
-                        render={(props) => (
-                            <Login
-                                {...props}
-                                input={this.inputChangeHandler}
-                                login={this.loginHandler}
-                            />
-                        )}
+			<div className='App'>
+				<Nav role={this.state.moodData.role} isLoggedIn={this.state.isLoggedIn} />
+				<Switch>
+					<Route
+						exact
+						path='/'
+						render={(props) => (
+							<Login
+								{...props}
+								input={this.inputChangeHandler}
+								login={this.loginHandler}
+							/>
+						)}
 					/>
-				
 
-                    <Route
-                        exact
-                        path='/mood-home'
-                        render={(props) => (
-                            <MoodHome
+
+					<Route
+						exact
+						path='/mood-home'
+						render={(props) => (
+							<MoodHome
 								{...props}
 								name={this.state.moodData.name}
 								click={this.moodScoreHandler}
@@ -195,34 +190,34 @@ notificationsHandler = (ind) => {
 								count={this.state.count}
 								notificationsHandler={this.notificationsHandler}
 								messages={this.state.messages}
-								
-                            />
-                        )}
-                    />
-                    <Route
-                        exact
-                        path='/results'
-                        render={(props) => (
-                            <Dashboard
-                                {...props}
-                                role={this.state.moodData.role}
-                            />
-                        )}
-                    />
-                    <Route
-                        exact
-                        path='/documents'
-                        render={(props) => (
-                            <Documents
-                                {...props}
-                                role={this.state.moodData.role}
-                            />
-                        )}
-                    />
+
+							/>
+						)}
+					/>
+					<Route
+						exact
+						path='/results'
+						render={(props) => (
+							<Dashboard
+								{...props}
+								role={this.state.moodData.role}
+							/>
+						)}
+					/>
+					<Route
+						exact
+						path='/documents'
+						render={(props) => (
+							<Documents
+								{...props}
+								role={this.state.moodData.role}
+							/>
+						)}
+					/>
 				</Switch>
-				
-            </div>
-        );
+
+			</div>
+		);
 	}
 }
 export default App;

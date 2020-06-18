@@ -1,4 +1,34 @@
 .footer {
-    height:100px;
-    background-color: #1C808F;
+  height:75px;
+	background-color: #1C808F;
+	display: grid;
+	grid-template-areas: "names links";
+	justify-content: space-between;
+	align-items: center;
 }
+
+.names {
+	color: black;
+	grid-area: names;
+	font-size: 1.7vh;
+	padding: 20px;
+}
+.links {
+	margin: 0;
+	padding: 20px;
+}
+.links a {
+	color: black;
+	grid-area: links;
+	font-size: 1.7vh;
+}
+.links a:hover {
+	color: white;
+}
+
+
+.names a:hover {
+	color: white;
+}
+
+
