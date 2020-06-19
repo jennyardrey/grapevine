@@ -2,7 +2,7 @@
 	width: 100vw;
 	display: grid;
   grid-template-columns: 33% 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto 1fr;
   gap: 1px 1px;
 	grid-template-areas: "title title" "menu content";
 	height: 100%;
