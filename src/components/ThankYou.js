@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/ThankYou.css";
-import { Link } from "react-router-dom"
 const ThankYou = () => {
 	return (
 		<div className="thankyou-message">
