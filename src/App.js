@@ -46,7 +46,7 @@ class App extends Component {
 
 	notificationsHandler = (ind) => {
 		const messages = [...this.state.messages]
-		const removedMess = messages.splice(ind, 1)
+	 messages.splice(ind, 1)
 		this.setState({
 			messages: messages,
 			count: this.state.count ? this.state.count - 1 : 0
