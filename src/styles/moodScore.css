@@ -12,11 +12,12 @@
 }
 /* main score   */
 .overall-score {
-	margin:20px;
+	margin:auto;
 	padding:40px;
 	position: relative;
 	box-sizing: border-box;
 	height:300px;
+	width:1150px;
 }
 .overall-score .overall-score-label {
 	background:linear-gradient(#03A896, #008090) ;
@@ -125,7 +126,8 @@ position: relative;
 	.overall-score {
 		max-width:90%;
 		margin:auto;
-		height:100%;
+		height: fit-content;
+		
 	}
 
 
@@ -166,4 +168,31 @@ position: relative;
 	left: 20%;
 }
 
+.messages-title-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top:-30px;
+	left: 5%;
+	background-color:#1C808F;
+	
+	min-width:90%;
+	padding:0px;
+	border-radius: 10px;
+	
+}
+
+
+}
+
+
+@media (max-width:1300px){
+	.overall-score {
+	margin:auto;
+	padding:40px;
+	position: relative;
+	box-sizing: border-box;
+	width:550px;
+}
 }
